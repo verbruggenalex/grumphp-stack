@@ -9,7 +9,7 @@ A Composer library with [Grumphp](https://github.com/phpro/grumphp#grumphp) and
 all of it's [suggested packages](https://github.com/phpro/grumphp/blob/master/composer.json#L49).
 Currently some of the suggestions are not included in this library because of
 conflicts between dependencies of suggestions or missing packages. These are
-[hardcoded in the development commands](./src/Robo/Plugin/Commands/GrumphpStackCommands.php#L41).
+[hardcoded in the development commands](./src/Robo/Plugin/Commands/GrumphpStackCommands.php#L45).
 
 ## Installation
 
