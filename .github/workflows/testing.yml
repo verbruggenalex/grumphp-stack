@@ -4,13 +4,24 @@ on:
     tags: [ '*' ]
 
 jobs:
-  build:
 
-    runs-on: ubuntu-latest
+  run:
 
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        php-versions: ['7.3', '7.4']
+
+    name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-versions }}
 
     - name: Composer cache
       id: composer-cache
@@ -24,3 +35,11 @@ jobs:
     - name: Composer install
       run: |
         composer install --prefer-dist --no-progress --no-suggest --ansi
+
+    - name: Static checks
+      run: |
+        ./vendor/bin/grumphp
+
+    - name: Regenerate composer.json
+      run: |
+        ./vendor/bin/robo gs:generate
