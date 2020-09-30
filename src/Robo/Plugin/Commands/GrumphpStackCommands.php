@@ -40,8 +40,9 @@ class GrumphpStackCommands extends \Robo\Tasks
         if (file_exists($grumphpComposerJson)) {
             $suggests = json_decode(file_get_contents($grumphpComposerJson), true)['suggest'];
 
-            // The symplify/asycodingstandard package not found on packagist.
+            // Change version of quizlabs/php_codesniffer to 3.x-dev.
             unset($suggests['symplify/easycodingstandard']);
+            unset($suggests['squizlabs/php_codesniffer']);
             // The codegyre/robo package is now consolidation/robo.
             unset($suggests['codegyre/robo']);
             // The infection/infection package conflicts with phpunit/phpunit.
@@ -58,6 +59,10 @@ class GrumphpStackCommands extends \Robo\Tasks
             unset($suggests['povils/phpmnd']);
 
             $packages = array_keys($suggests);
+            // Change version and package names:
+            $packages[] = 'squizlabs/php_codesniffer:3.x-dev';
+            $packages[] = 'symplify/easy-coding-standard';
+            $packages[] = 'consolidation/robo';
             // Add the phpro/grumphp package.
             $packages[] = 'phpro/grumphp';
         }
