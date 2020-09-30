@@ -40,7 +40,7 @@ jobs:
 
     - name: Static checks
       run: |
-        ./vendor/bin/grumphp --ansi
+        ./vendor/bin/grumphp run --ansi
 
     - name: Regenerate composer.json
       run: |
