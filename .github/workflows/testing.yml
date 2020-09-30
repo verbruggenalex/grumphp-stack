@@ -45,3 +45,9 @@ jobs:
     - name: Regenerate composer.json
       run: |
         ./vendor/bin/robo gs:generate --ansi
+
+    - name: Test packagist download
+      run: |
+        composer global config minimum-stability dev
+        composer global config prefer-stable true
+        composer global require verbruggenalex/grumphp-stack:dev-master
