@@ -38,9 +38,11 @@ class GrumphpStackCommands extends \Robo\Tasks
         $packages = [];
         $grumphpComposerJson = $tmpDir . 'composer.json';
         if (file_exists($grumphpComposerJson)) {
+            $this->taskExecStack()->exec('cat ' . $grumphpComposerJson)->run();
             $grumphpContents = file_get_contents($grumphpComposerJson);
             $grumphpArray = json_decode($grumphpContents, true);
             $suggests = $grumphpArray['suggest'];
+            var_dump($suggests);
 
             // The symplify/asycodingstandard package not found on packagist.
             unset($suggests['symplify/easycodingstandard']);
