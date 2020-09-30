@@ -27,7 +27,7 @@ class GrumphpStackCommands extends \Robo\Tasks
     public function generateComposerJson()
     {
         // Download the phpro/grumphp composer.json file.
-        $tmpDir = '.tmp/';
+        $tmpDir = getcwd() . '/.tmp/';
         $this->tasks[] = $this->taskExecStack()
             ->stopOnFail()
             ->exec('rm -rf ' . $tmpDir)
