@@ -1,3 +1,8 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/verbruggenalex/grumphp-stack/test-library?label=Build&logo=github)
+![GitHub last commit](https://img.shields.io/github/last-commit/verbruggenalex/grumphp-stack?label=Last%20commit&logo=github)
+![GitHub issues](https://img.shields.io/github/issues/verbruggenalex/grumphp-stack?label=issues&logo=github)
+![Scrutinizer code quality](https://img.shields.io/scrutinizer/quality/g/verbruggenalex/grumphp-stack?label=Code%20quality&logo=scrutinizer)
+
 # Grumphp Stack
 
 A Composer library with [Grumphp](https://github.com/phpro/grumphp#grumphp) and
