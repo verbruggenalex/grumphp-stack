@@ -28,21 +28,18 @@ class GrumphpStackCommands extends \Robo\Tasks
     {
         // Download the phpro/grumphp composer.json file.
         $tmpDir = getcwd() . '/.tmp/';
-        $this->tasks[] = $this->taskExecStack()
+        $this->taskExecStack()
             ->stopOnFail()
             ->exec('rm -rf ' . $tmpDir)
             ->exec('mkdir -p ' . $tmpDir)
-            ->exec('wget -P ' . $tmpDir . ' ' . self::GRUMPHP_COMPOSER_URL);
+            ->exec('wget -P ' . $tmpDir . ' ' . self::GRUMPHP_COMPOSER_URL)->run();
 
         // Get the packages from the suggest section.
         $packages = [];
         $grumphpComposerJson = $tmpDir . 'composer.json';
-        $this->tasks[] = $this->taskExecStack()->exec('ls -la ' . $tmpDir);
+        $this->tasks[] = $this->taskExecStack()->exec('ls -la ' . $tmpDir)->run();
         if (file_exists($grumphpComposerJson)) {
-            $grumphpContents = file_get_contents($grumphpComposerJson);
-            $grumphpArray = json_decode($grumphpContents, true);
-            $suggests = $grumphpArray['suggest'];
-            var_dump($suggests);
+            $suggests = json_decode(file_get_contents($grumphpComposerJson), true)['suggest'];
 
             // The symplify/asycodingstandard package not found on packagist.
             unset($suggests['symplify/easycodingstandard']);
