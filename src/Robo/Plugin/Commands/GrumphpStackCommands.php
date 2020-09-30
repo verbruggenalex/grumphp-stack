@@ -2,6 +2,8 @@
 
 namespace VerbruggenAlex\GrumphpStack\Robo\Plugin\Commands;
 
+use Symfony\Component\Process\ExecutableFinder;
+
 /**
  * This is project's console commands configuration for Robo task runner.
  *
@@ -70,11 +72,12 @@ class GrumphpStackCommands extends \Robo\Tasks
         ));
 
         // Require all the suggest packages from phpro/grumphp.
-        $composerBin = '/usr/local/bin/composer';
+        $finder = new ExecutableFinder();
+        $composerBin = $finder->find('composer');
         $this->tasks[] = $this->taskExecStack()
             ->stopOnFail()
             ->executable($composerBin)
-            ->exec('require ' . implode(' ', $packages) . ' --prefer-lowest --ansi');
+            ->exec('require ' . implode(' ', $packages) . ' --prefer-lowest --no-suggest --no-progress --ansi');
 
         // Normalize the composer.json.
         $this->tasks[] = $this->taskExecStack()
