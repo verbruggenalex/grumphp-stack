@@ -39,7 +39,6 @@
         "symplify/easy-coding-standard": "^8.3",
         "vimeo/psalm": "^3.16"
     },
-    "require-dev": {},
     "autoload-dev": {
         "psr-4": {
             "VerbruggenAlex\\GrumphpStack\\": "src/"
