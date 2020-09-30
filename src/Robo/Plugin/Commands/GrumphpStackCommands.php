@@ -61,6 +61,7 @@ class GrumphpStackCommands extends \Robo\Tasks
             // Add the phpro/grumphp package.
             $packages[] = 'phpro/grumphp';
         }
+        var_dump($packages);
 
 
         // Remove require section from composer.json to re-require the suggests.
