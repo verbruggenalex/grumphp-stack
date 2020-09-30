@@ -13,7 +13,7 @@ jobs:
         operating-system: [ubuntu-latest]
         php-versions: ['7.3', '7.4']
 
-    name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
+    name: PHP ${{ matrix.php-versions }}
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -34,12 +34,12 @@ jobs:
 
     - name: Composer install
       run: |
-        composer install --prefer-dist --no-progress --no-suggest --ansi
+        composer install --prefer-dist --prefer-lowest --no-progress --no-suggest --ansi
 
     - name: Static checks
       run: |
-        ./vendor/bin/grumphp
+        ./vendor/bin/grumphp --ansi
 
     - name: Regenerate composer.json
       run: |
-        ./vendor/bin/robo gs:generate
+        ./vendor/bin/robo gs:generate --ansi
