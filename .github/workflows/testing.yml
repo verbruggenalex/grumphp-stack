@@ -49,4 +49,4 @@ jobs:
     - name: Test packagist download
       run: |
         composer global config minimum-stability dev
-        composer global require verbruggenalex/grumphp-stack:dev-master --prefer-stable --no-suggest --no-progress
+        composer global require verbruggenalex/grumphp-stack:dev-master --prefer-stable --no-suggest --no-progress --ansi
