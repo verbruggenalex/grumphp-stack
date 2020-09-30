@@ -37,8 +37,8 @@ class GrumphpStackCommands extends \Robo\Tasks
         // Get the packages from the suggest section.
         $packages = [];
         $grumphpComposerJson = $tmpDir . 'composer.json';
+        $this->taskExecStack()->exec('ls -la ' . $tmpDir)->run();
         if (file_exists($grumphpComposerJson)) {
-            $this->taskExecStack()->exec('cat ' . $grumphpComposerJson)->run();
             $grumphpContents = file_get_contents($grumphpComposerJson);
             $grumphpArray = json_decode($grumphpContents, true);
             $suggests = $grumphpArray['suggest'];
