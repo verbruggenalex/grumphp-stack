@@ -39,6 +39,7 @@ class GrumphpStackCommands extends \Robo\Tasks
         $grumphpComposerJson = $tmpDir . '/composer.json';
         if (file_exists($grumphpComposerJson)) {
             $suggests = json_decode(file_get_contents($grumphpComposerJson), true)['suggest'];
+            var_dump($suggests);
 
             // The symplify/asycodingstandard package not found on packagist.
             unset($suggests['symplify/easycodingstandard']);
@@ -61,7 +62,6 @@ class GrumphpStackCommands extends \Robo\Tasks
             // Add the phpro/grumphp package.
             $packages[] = 'phpro/grumphp';
         }
-        var_dump($packages);
 
 
         // Remove require section from composer.json to re-require the suggests.
