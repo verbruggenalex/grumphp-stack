@@ -1,0 +1,19 @@
+version: '3'
+services:
+# ==============================================================================
+  web:
+    image: verbral/php-theia:7.4
+    working_dir: ${PWD}
+    environment:
+      PHP_EXTENSION_BLACKFIRE: 1
+      PHP_INI_ERROR_REPORTING: E_ALL
+      PHP_INI_MEMORY_LIMIT: 2g
+      WAKATIME_API_KEY:
+      GIT_USER_NAME:
+      GIT_USER_EMAIL:
+    volumes:
+      - ${PWD}:${PWD}
+      - ~/.ssh:/home/docker/.ssh
+    ports:
+      - 81:80
+      - 3000:3000

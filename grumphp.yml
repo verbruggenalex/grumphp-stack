@@ -1,0 +1,64 @@
+# grumphp.yml
+grumphp:
+    ascii:
+        failed: ~
+        succeeded: ~
+    tasks:
+        # ant: ~
+        # atoum: ~
+        # behat: ~
+        # brunch: ~
+        # clover_coverage: ~
+        # codeception: ~
+        composer: ~
+        composer_normalize: ~
+        # composer_require_checker: ~
+        # composer_script: ~
+        # deptrac: ~
+        # doctrine_orm: ~
+        # ecs: ~
+        # eslint: ~
+        file_size:
+            max_size: 50K
+            ignore_patterns: ['vendor', '.tmp']
+        # gherkin: ~
+        git_blacklist: ~
+        git_branch_name: ~
+        git_commit_message: ~
+        # grunt: ~
+        # gulp: ~
+        # infection: ~
+        jsonlint:
+            ignore_patterns: ['vendor', '.tmp']
+        # kahlan: ~
+        # make: ~
+        # npm_script: ~
+        # paratest: ~
+        # pest: ~
+        # phan: ~        
+        # phing: ~
+        # php7cc: ~
+        # phpcpd: ~
+        phpcs: ~
+        # phpcsfixer: ~
+        phplint: ~
+        phpmd: ~
+        # phpmnd: ~
+        # phpparser: ~
+        # phpspec: ~
+        # phpstan: ~
+        # phpunit: ~
+        # phpunitbridge: ~
+        phpversion:
+            project: '7.3'
+        # progpilot: ~
+        psalm: ~    
+        # robo: ~
+        securitychecker: ~
+        # shell: ~
+        # tester: ~
+        # twigcs: ~
+        xmllint:
+            ignore_patterns: ['vendor', '.tmp']
+        yamllint:
+            ignore_patterns: ['vendor', '.tmp']
