@@ -36,10 +36,9 @@ class GrumphpStackCommands extends \Robo\Tasks
 
         // Get the packages from the suggest section.
         $packages = [];
-        $grumphpComposerJson = $tmpDir . '/composer.json';
+        $grumphpComposerJson = $tmpDir . 'composer.json';
         if (file_exists($grumphpComposerJson)) {
             $suggests = json_decode(file_get_contents($grumphpComposerJson), true)['suggest'];
-            var_dump($suggests);
 
             // The symplify/asycodingstandard package not found on packagist.
             unset($suggests['symplify/easycodingstandard']);
