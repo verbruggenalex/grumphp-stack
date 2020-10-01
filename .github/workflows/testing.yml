@@ -51,6 +51,5 @@ jobs:
         composer global config minimum-stability dev
         composer global require verbruggenalex/grumphp-stack:dev-master --prefer-stable --no-suggest --no-progress --ansi --no-interaction
         export PATH=$PATH:$HOME/.composer/vendor/bin
-        ls -la $HOME/.composer/vendor/bin
         cd test && grumphp run
         

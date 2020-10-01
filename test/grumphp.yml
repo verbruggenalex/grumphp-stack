@@ -15,7 +15,7 @@ grumphp:
         composer_require_checker: ~
         # composer_script: ~
         deptrac: ~
-        doctrine_orm: ~
+        # doctrine_orm: ~
         ecs: ~
         eslint: ~
         file_size: ~
