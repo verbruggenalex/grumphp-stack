@@ -4,19 +4,19 @@ grumphp:
         failed: ~
         succeeded: ~
     tasks:
-        ant: ~
+        # ant: ~
         atoum: ~
-        behat: ~
+        # behat: ~
         brunch: ~
         # clover_coverage: ~
-        codeception: ~
+        # codeception: ~
         composer: ~
         composer_normalize: ~
-        composer_require_checker: ~
+        # composer_require_checker: ~
         # composer_script: ~
-        deptrac: ~
+        # deptrac: ~
         # doctrine_orm: ~
-        ecs: ~
+        # ecs: ~
         eslint: ~
         file_size: ~
         gherkin: ~
@@ -27,28 +27,28 @@ grumphp:
         gulp: ~
         # infection: ~
         jsonlint: ~
-        kahlan: ~
-        make: ~
+        # kahlan: ~
+        # make: ~
         # npm_script: ~
         paratest: ~
-        pest: ~
-        phan: ~
-        phing: ~
+        # pest: ~
+        # phan: ~
+        # phing: ~
         # php7cc: ~
         phpcpd: ~
         phpcs: ~
-        phpcsfixer: ~
+        # phpcsfixer: ~
         phplint: ~
         phpmd: ~
         # phpmnd: ~
         phpparser: ~
         phpspec: ~
         phpstan: ~
-        phpunit: ~
-        phpunitbridge: ~
+        # phpunit: ~
+        # phpunitbridge: ~
         phpversion: ~
         progpilot: ~
-        psalm: ~    
+        # psalm: ~    
         robo: ~
         securitychecker: ~
         shell: ~
