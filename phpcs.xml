@@ -4,7 +4,7 @@
   <description>The coding standard for this project.</description>
 
   <exclude-pattern>*/vendor/*</exclude-pattern>
-  <exclude-pattern>*/build/*</exclude-pattern>
+  <exclude-pattern>*/test/*</exclude-pattern>
 
   <rule ref="PSR2"/>
 

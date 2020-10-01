@@ -1,0 +1,6 @@
+{
+    "name": "docker/test",
+    "description": "Description",
+    "minimum-stability": "dev",
+    "require": {}
+}
