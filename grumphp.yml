@@ -16,7 +16,8 @@ grumphp:
         ## If you want to try and get it to work you definitely have to up the
         ## grumphp.process_timeout setting to 120+
         # composer_require_checker: ~
-        # composer_script: ~
+        composer_script:
+            script: echo
         # deptrac: ~
         # doctrine_orm: ~
         # ecs: ~

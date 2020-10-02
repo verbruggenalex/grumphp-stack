@@ -46,6 +46,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "post-install-cmd": "npm install"
+        "post-install-cmd": "@npm-install",
+        "echo": "echo 'Hello'",
+        "npm-install": "npm install"
     }
 }
