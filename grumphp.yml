@@ -45,7 +45,7 @@ grumphp:
         # phpcpd:
         #     exclude: ['vendor']
         phpcs: ~
-        # phpcsfixer: ~
+        phpcsfixer: ~
         phplint: ~
         phpmd:
             exclude: ['.tmp', 'vendor']
