@@ -39,11 +39,13 @@ grumphp:
         phpcs: ~
         # phpcsfixer: ~
         phplint: ~
-        phpmd: ~
+        phpmd:
+            exclude: ['vendor']
         # phpmnd: ~
         phpparser: ~
         phpspec: ~
-        phpstan: ~
+        phpstan:
+            ignore_patterns: ['vendor']
         # phpunit: ~
         # phpunitbridge: ~
         phpversion: ~
