@@ -68,7 +68,12 @@ grumphp:
         securitychecker: ~
         shell: ~
         tester: ~
-        twigcs: ~
+        twigcs:
+            path: '.'
+            severity: 'warning'
+            ruleset: 'Allocine\Twigcs\Ruleset\Official'
+            triggered_by: ['twig']
+            exclude: []
         xmllint:
             ignore_patterns: ['.tmp', 'vendor']
         yamllint:
