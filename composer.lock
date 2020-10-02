@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51695fdb8c6df72dea3e6eaa649ee218",
+    "content-hash": "de2303a9aedd6a0c3150370c3f26bfac",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3295,16 +3295,16 @@
         },
         {
             "name": "friendsoftwig/twigcs",
-            "version": "v3.2.2",
+            "version": "v4.0.BETA2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/friendsoftwig/twigcs.git",
-                "reference": "7c4bc76dad8d851045b9eeab4979a240550f8300"
+                "reference": "d6a9cdf35c97c857104f6e764866e302aa463520"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/friendsoftwig/twigcs/zipball/7c4bc76dad8d851045b9eeab4979a240550f8300",
-                "reference": "7c4bc76dad8d851045b9eeab4979a240550f8300",
+                "url": "https://api.github.com/repos/friendsoftwig/twigcs/zipball/d6a9cdf35c97c857104f6e764866e302aa463520",
+                "reference": "d6a9cdf35c97c857104f6e764866e302aa463520",
                 "shasum": ""
             },
             "require": {
@@ -3323,8 +3323,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Allocine\\Twigcs\\": "src/",
-                    "Allocine\\Twigcs\\Tests\\": "tests/"
+                    "FriendsOfTwig\\Twigcs\\": "src/",
+                    "FriendsOfTwig\\Twigcs\\Tests\\": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3333,12 +3333,12 @@
             ],
             "authors": [
                 {
-                    "name": "OwlyCode",
+                    "name": "Tristan Maindron",
                     "email": "tmaindron@gmail.com"
                 }
             ],
             "description": "Checkstyle automation for Twig",
-            "time": "2019-10-26T10:36:59+00:00"
+            "time": "2019-10-20T16:47:01+00:00"
         },
         {
             "name": "gitonomy/gitlib",
@@ -11777,6 +11777,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "friendsoftwig/twigcs": 10,
         "roave/security-advisories": 20,
         "squizlabs/php_codesniffer": 20
     },
