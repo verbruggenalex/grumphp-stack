@@ -41,6 +41,10 @@ grumphp:
         phpcpd:
             directory: ['.']
             exclude: ['vendor']
+            fuzzy: false
+            min_lines: 5
+            min_tokens: 70
+            triggered_by: ['php']
         phpcs: ~
         # phpcsfixer: ~
         phplint: ~
