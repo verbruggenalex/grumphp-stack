@@ -40,6 +40,14 @@ class GrumphpStackCommands extends \Robo\Tasks
         if (file_exists($grumphpComposerJson)) {
             $suggests = json_decode(file_get_contents($grumphpComposerJson), true)['suggest'];
 
+
+            // Remove require section from composer.json to re-require the suggests.
+            $libraryComposerJson = json_decode(file_get_contents('composer.json'), true);
+            $oldPackages = $libraryComposerJson['require'];
+            $toRemove = array_diff_key($oldPackages, $suggests);
+            // Do not remove phpro/grumphp itself.
+            unset($toRemove['phpro/grumphp']);
+
             // Change version of quizlabs/php_codesniffer to 3.x-dev.
             unset($suggests['symplify/easycodingstandard']);
             unset($suggests['squizlabs/php_codesniffer']);
@@ -69,22 +77,22 @@ class GrumphpStackCommands extends \Robo\Tasks
             $packages[] = 'phpro/grumphp';
         }
 
-
-        // Remove require section from composer.json to re-require the suggests.
-        $libraryComposerJson = json_decode(file_get_contents('composer.json'), true);
-        unset($libraryComposerJson['require']);
-        file_put_contents('composer.json', json_encode(
-            $libraryComposerJson,
-            JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
-        ));
-
-        // Require all the suggest packages from phpro/grumphp.
         $finder = new ExecutableFinder();
         $composerBin = $finder->find('composer');
+
+        // Remove packages.
+        if (count($toRemove) !== 0) {
+            $this->tasks[] = $this->taskExecStack()
+                ->stopOnFail()
+                ->executable($composerBin)
+                ->exec('remove ' . implode(' ', $toRemove) . ' --ansi');
+        }
+
+        // Require the new suggest packages.
         $this->tasks[] = $this->taskExecStack()
             ->stopOnFail()
             ->executable($composerBin)
-            ->exec('require ' . implode(' ', $packages) . ' --no-suggest --no-progress --ansi');
+            ->exec('require ' . implode(' ', $packages) . ' --prefer-lowest --no-suggest --no-progress --ansi');
 
         // Normalize the composer.json.
         $this->tasks[] = $this->taskExecStack()

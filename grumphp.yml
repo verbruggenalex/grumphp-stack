@@ -5,9 +5,9 @@ grumphp:
         succeeded: ~
     tasks:
         # ant: ~
-        # atoum: ~
+        atoum: ~
         # behat: ~
-        # brunch: ~
+        brunch: ~
         # clover_coverage: ~
         # codeception: ~
         composer: ~
@@ -17,48 +17,48 @@ grumphp:
         # deptrac: ~
         # doctrine_orm: ~
         # ecs: ~
-        # eslint: ~
+        eslint: ~
         file_size:
-            max_size: 50K
-            ignore_patterns: ['.tmp', 'vendor']
+            max_size: 10K
+            ignore_patterns: ['.tmp', 'vendor', 'composer.lock']
         # gherkin: ~
         git_blacklist: ~
         git_branch_name: ~
         git_commit_message: ~
-        # grunt: ~
-        # gulp: ~
+        grunt: ~
+        gulp: ~
         # infection: ~
         jsonlint:
             ignore_patterns: ['.tmp', 'vendor']
         # kahlan: ~
         # make: ~
         # npm_script: ~
-        # paratest: ~
+        paratest: ~
         # pest: ~
         # phan: ~        
         # phing: ~
         # php7cc: ~
-        # phpcpd: ~
+        phpcpd: ~
         phpcs: ~
         # phpcsfixer: ~
         phplint: ~
         phpmd:
             exclude: ['.tmp', 'vendor']
         # phpmnd: ~
-        # phpparser: ~
-        # phpspec: ~
-        # phpstan: ~
+        phpparser: ~
+        phpspec: ~
+        phpstan: ~
         # phpunit: ~
         # phpunitbridge: ~
         phpversion:
             project: '7.3'
-        # progpilot: ~
+        progpilot: ~
         psalm: ~    
-        # robo: ~
+        robo: ~
         securitychecker: ~
-        # shell: ~
-        # tester: ~
-        # twigcs: ~
+        shell: ~
+        tester: ~
+        twigcs: ~
         xmllint:
             ignore_patterns: ['.tmp', 'vendor']
         yamllint:

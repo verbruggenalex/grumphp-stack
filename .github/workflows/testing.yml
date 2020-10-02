@@ -45,11 +45,3 @@ jobs:
     - name: Regenerate composer.json
       run: |
         ./vendor/bin/robo gs:generate --ansi
-
-    - name: Test packagist download
-      run: |
-        composer global config minimum-stability dev
-        composer global require verbruggenalex/grumphp-stack:dev-master --prefer-stable --no-suggest --no-progress --ansi --no-interaction
-        export PATH=$PATH:$HOME/.composer/vendor/bin
-        cd test && grumphp run
-        
