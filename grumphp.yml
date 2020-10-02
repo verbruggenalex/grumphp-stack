@@ -20,9 +20,7 @@ grumphp:
         # deptrac: ~
         # doctrine_orm: ~
         # ecs: ~
-        eslint:
-            bin: node_modules/.bin/eslint
-            config: .eslintrc.js
+        eslint: ~
         file_size:
             max_size: 10K
             ignore_patterns: ['.tmp', 'vendor', 'composer.lock']
