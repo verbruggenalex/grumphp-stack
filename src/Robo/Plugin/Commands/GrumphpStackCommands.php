@@ -83,7 +83,7 @@ class GrumphpStackCommands extends \Robo\Tasks
 
             $packages = array_keys($suggests);
             // Change version and package names:
-            $packages[] = 'friendsoftwig/twigcs:^4.0@beta';
+            $packages[] = 'friendsoftwig/twigcs:^4.0';
             $packages[] = 'squizlabs/php_codesniffer:3.x-dev';
             $packages[] = 'symplify/easy-coding-standard';
             $packages[] = 'consolidation/robo';
