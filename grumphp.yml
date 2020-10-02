@@ -58,7 +58,7 @@ grumphp:
         phpparser: ~
         phpspec: ~
         phpstan: ~
-        # phpunit: ~
+        phpunit: ~
         # phpunitbridge: ~
         phpversion:
             project: '7.3'
@@ -67,7 +67,7 @@ grumphp:
         robo: ~
         securitychecker: ~
         shell: ~
-        tester: ~
+        # tester: ~
         twigcs:
             path: '.'
             severity: 'warning'
