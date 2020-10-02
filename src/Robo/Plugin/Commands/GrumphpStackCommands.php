@@ -48,6 +48,14 @@ class GrumphpStackCommands extends \Robo\Tasks
             // Do not remove phpro/grumphp itself.
             unset($toRemove['phpro/grumphp']);
 
+            // Remove packages.
+            if (count($toRemove) !== 0) {
+                $this->tasks[] = $this->taskExecStack()
+                    ->stopOnFail()
+                    ->executable($composerBin)
+                    ->exec('remove ' . implode(' ', $toRemove) . ' --ansi');
+            }
+
             // Change version of quizlabs/php_codesniffer to 3.x-dev.
             unset($suggests['symplify/easycodingstandard']);
             unset($suggests['squizlabs/php_codesniffer']);
@@ -79,14 +87,6 @@ class GrumphpStackCommands extends \Robo\Tasks
 
         $finder = new ExecutableFinder();
         $composerBin = $finder->find('composer');
-
-        // Remove packages.
-        if (count($toRemove) !== 0) {
-            $this->tasks[] = $this->taskExecStack()
-                ->stopOnFail()
-                ->executable($composerBin)
-                ->exec('remove ' . implode(' ', $toRemove) . ' --ansi');
-        }
 
         // Require the new suggest packages.
         $this->tasks[] = $this->taskExecStack()
