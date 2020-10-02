@@ -57,6 +57,8 @@ class GrumphpStackCommands extends \Robo\Tasks
             // of an older phpunit/php-timer ^2.0||^3.0 requirement. I would
             // like to resolve that one.
             unset($suggests['povils/phpmnd']);
+            // The pestphp/pest package conflicts with phpunit/phpunit req.
+            unset($suggests['pestphp/pest']);
 
             $packages = array_keys($suggests);
             // Change version and package names:
