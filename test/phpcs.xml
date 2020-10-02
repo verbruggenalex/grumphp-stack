@@ -3,6 +3,8 @@
 
   <description>The coding standard for this project.</description>
 
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+
   <rule ref="PSR2"/>
 
   <file>.</file>
