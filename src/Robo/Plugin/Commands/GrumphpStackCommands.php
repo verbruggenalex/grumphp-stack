@@ -84,7 +84,7 @@ class GrumphpStackCommands extends \Robo\Tasks
         $this->tasks[] = $this->taskExecStack()
             ->stopOnFail()
             ->executable($composerBin)
-            ->exec('require ' . implode(' ', $packages) . ' --prefer-lowest --no-suggest --no-progress --ansi');
+            ->exec('require ' . implode(' ', $packages) . ' --no-suggest --no-progress --ansi');
 
         // Normalize the composer.json.
         $this->tasks[] = $this->taskExecStack()
