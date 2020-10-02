@@ -59,7 +59,7 @@ grumphp:
         phpspec: ~
         phpstan: ~
         phpunit: ~
-        # phpunitbridge: ~
+        phpunitbridge: ~
         phpversion:
             project: '7.3'
         progpilot: ~
@@ -69,10 +69,6 @@ grumphp:
         shell: ~
         # tester: ~
         twigcs:
-            path: '.'
-            severity: 'warning'
-            ruleset: 'FriendsOfTwig\Twigcs\Ruleset\Official'
-            triggered_by: ['twig']
             exclude: ['.tmp', 'vendor']
         xmllint:
             ignore_patterns: ['.tmp', 'vendor']
