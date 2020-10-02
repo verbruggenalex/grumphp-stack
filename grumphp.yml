@@ -38,13 +38,14 @@ grumphp:
         # phan: ~        
         # phing: ~
         # php7cc: ~
-        phpcpd:
-            directory: ['.']
-            exclude: ['vendor']
-            fuzzy: false
-            min_lines: 5
-            min_tokens: 70
-            triggered_by: ['php']
+        ## Works locally, but on github actions does not find php files.
+        # phpcpd:
+        #     directory: ['.']
+        #     exclude: ['vendor']
+        #     fuzzy: false
+        #     min_lines: 5
+        #     min_tokens: 70
+        #     triggered_by: ['php']
         phpcs: ~
         # phpcsfixer: ~
         phplint: ~
