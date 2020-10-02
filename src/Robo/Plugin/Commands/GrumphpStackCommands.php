@@ -36,7 +36,10 @@ class GrumphpStackCommands extends \Robo\Tasks
 
         // Get the packages from the suggest section.
         $packages = [];
+        $finder = new ExecutableFinder();
+        $composerBin = $finder->find('composer');
         $grumphpComposerJson = $tmpDir . 'composer.json';
+
         if (file_exists($grumphpComposerJson)) {
             $suggests = json_decode(file_get_contents($grumphpComposerJson), true)['suggest'];
 
@@ -84,9 +87,6 @@ class GrumphpStackCommands extends \Robo\Tasks
             // Add the phpro/grumphp package.
             $packages[] = 'phpro/grumphp';
         }
-
-        $finder = new ExecutableFinder();
-        $composerBin = $finder->find('composer');
 
         // Require the new suggest packages.
         $this->tasks[] = $this->taskExecStack()
