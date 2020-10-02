@@ -59,7 +59,7 @@ grumphp:
         phpspec: ~
         phpstan: ~
         phpunit: ~
-        phpunitbridge: ~
+        # phpunitbridge: ~
         phpversion:
             project: '7.3'
         progpilot: ~
