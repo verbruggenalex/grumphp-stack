@@ -56,14 +56,11 @@ class GrumphpStackCommands extends \Robo\Tasks
                 $this->tasks[] = $this->taskExecStack()
                     ->stopOnFail()
                     ->executable($composerBin)
-                    ->exec('remove ' . implode(' ', $toRemove) . ' --ansi');
+                    ->exec('remove ' . implode(' ', array_keys($toRemove)) . ' --ansi');
             }
 
             // Change version of quizlabs/php_codesniffer to 3.x-dev.
-            unset($suggests['symplify/easycodingstandard']);
             unset($suggests['squizlabs/php_codesniffer']);
-            // The codegyre/robo package is now consolidation/robo.
-            unset($suggests['codegyre/robo']);
             // The infection/infection package conflicts with phpunit/phpunit.
             unset($suggests['infection/infection']);
             // The sstalle/php7cc package conflicts with nikic/php-parser.
@@ -80,6 +77,9 @@ class GrumphpStackCommands extends \Robo\Tasks
             unset($suggests['pestphp/pest']);
             // Unset friendsoftwig/twigcs to make the requirement higher.
             unset($suggests['friendsoftwig/twigcs']);
+            // Unset codeception/codeception because of phpunit. I'm just not
+            // familiar enough with these tests yet.
+            unset($suggests['codeception/codeception']);
 
             $packages = array_keys($suggests);
             // Change version and package names:

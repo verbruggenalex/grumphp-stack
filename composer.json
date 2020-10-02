@@ -19,7 +19,6 @@
         "ergebnis/composer-normalize": "^2.8",
         "friendsofphp/php-cs-fixer": "^2.16",
         "friendsoftwig/twigcs": ">=4",
-        "jakub-onderka/php-parallel-lint": "^1.0",
         "maglnet/composer-require-checker": "^2.1",
         "nette/tester": "^2.3",
         "nikic/php-parser": "^4.10",
