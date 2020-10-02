@@ -38,7 +38,9 @@ grumphp:
         # phan: ~        
         # phing: ~
         # php7cc: ~
-        phpcpd: ~
+        phpcpd:
+            directory: ['.']
+            exclude: ['vendor']
         phpcs: ~
         # phpcsfixer: ~
         phplint: ~
