@@ -1,8 +1,0 @@
-{
-    "name": "docker/test",
-    "description": "Description",
-    "require": {
-        "symfony/finder": "^5.2@dev"
-    },
-    "minimum-stability": "dev"
-}

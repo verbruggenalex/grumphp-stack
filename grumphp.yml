@@ -20,7 +20,7 @@ grumphp:
         # eslint: ~
         file_size:
             max_size: 50K
-            ignore_patterns: ['test', '.tmp', 'vendor']
+            ignore_patterns: ['.tmp', 'vendor']
         # gherkin: ~
         git_blacklist: ~
         git_branch_name: ~
@@ -29,7 +29,7 @@ grumphp:
         # gulp: ~
         # infection: ~
         jsonlint:
-            ignore_patterns: ['test', '.tmp', 'vendor']
+            ignore_patterns: ['.tmp', 'vendor']
         # kahlan: ~
         # make: ~
         # npm_script: ~
@@ -43,7 +43,7 @@ grumphp:
         # phpcsfixer: ~
         phplint: ~
         phpmd:
-            exclude: ['test', '.tmp', 'vendor']
+            exclude: ['.tmp', 'vendor']
         # phpmnd: ~
         # phpparser: ~
         # phpspec: ~
@@ -60,6 +60,6 @@ grumphp:
         # tester: ~
         # twigcs: ~
         xmllint:
-            ignore_patterns: ['test', '.tmp', 'vendor']
+            ignore_patterns: ['.tmp', 'vendor']
         yamllint:
-            ignore_patterns: ['test', '.tmp', 'vendor']
+            ignore_patterns: ['.tmp', 'vendor']
