@@ -20,7 +20,9 @@ grumphp:
         # deptrac: ~
         # doctrine_orm: ~
         # ecs: ~
-        eslint: ~
+        eslint:
+            bin: node_modules/.bin/eslint
+            config: .eslintrc.js
         file_size:
             max_size: 10K
             ignore_patterns: ['.tmp', 'vendor', 'composer.lock']
@@ -63,7 +65,7 @@ grumphp:
         phpversion:
             project: '7.3'
         progpilot: ~
-        psalm: ~    
+        psalm: ~
         robo: ~
         securitychecker: ~
         shell: ~

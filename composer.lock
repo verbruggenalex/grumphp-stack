@@ -11781,7 +11781,7 @@
         "squizlabs/php_codesniffer": 20
     },
     "prefer-stable": true,
-    "prefer-lowest": true,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
     "plugin-api-version": "1.1.0"

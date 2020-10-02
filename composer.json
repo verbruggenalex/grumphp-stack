@@ -44,5 +44,17 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": [
+            "@install-brunch",
+            "@install-eslint",
+            "@install-gulp",
+            "@install-grunt"
+        ],
+        "install-brunch": "npm install brunch --save-dev",
+        "install-eslint": "npm install eslint --save-dev",
+        "install-grunt": "npm install grunt --save-dev",
+        "install-gulp": "npm install gulp --save-dev"
+    }
 }

@@ -1,0 +1,29 @@
+{
+  "name": "grumphp-stack",
+  "version": "1.0.0",
+  "description": "[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/verbruggenalex/grumphp-stack/test-library?label=Build&logo=github)](https://github.com/verbruggenalex/grumphp-stack/actions) [![GitHub last commit](https://img.shields.io/github/last-commit/verbruggenalex/grumphp-stack?label=Last%20commit&logo=github)](https://github.com/verbruggenalex/grumphp-stack/commits/master) [![GitHub issues](https://img.shields.io/github/issues/verbruggenalex/grumphp-stack?label=issues&logo=github)](https://github.com/verbruggenalex/grumphp-stack/issues) [![Scrutinizer code quality](https://img.shields.io/scrutinizer/quality/g/verbruggenalex/grumphp-stack?label=Code%20quality&logo=scrutinizer)](https://scrutinizer-ci.com/g/verbruggenalex/grumphp-stack/) [![GitHub](https://img.shields.io/github/license/verbruggenalex/grumphp-stack?label=License&logo=github)](https://github.com/verbruggenalex/grumphp-stack/blob/master/LICENSE) [![Packagist Downloads](https://img.shields.io/packagist/dt/verbruggenalex/grumphp-stack?label=Downloads&logo=composer)](https://packagist.org/packages/verbruggenalex/grumphp-stack)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "brunch": "^3.0.0",
+    "eslint": "^7.10.0",
+    "grunt": "^1.3.0",
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verbruggenalex/grumphp-stack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verbruggenalex/grumphp-stack/issues"
+  },
+  "homepage": "https://github.com/verbruggenalex/grumphp-stack#readme"
+}
