@@ -42,6 +42,7 @@ jobs:
 
     - name: Static checks
       run: |
+        export PATH=$PATH:./node_modules/.bin
         ./vendor/bin/grumphp run --ansi
 
     - name: Regenerate composer.json
