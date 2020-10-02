@@ -78,9 +78,12 @@ class GrumphpStackCommands extends \Robo\Tasks
             unset($suggests['povils/phpmnd']);
             // The pestphp/pest package conflicts with phpunit/phpunit req.
             unset($suggests['pestphp/pest']);
+            // Unset friendsoftwig/twigcs to make the requirement higher.
+            unset($suggests['friendsoftwig/twigcs']);
 
             $packages = array_keys($suggests);
             // Change version and package names:
+            $packages[] = 'friendsoftwig/twigcs:^3.2.2';
             $packages[] = 'squizlabs/php_codesniffer:3.x-dev';
             $packages[] = 'symplify/easy-coding-standard';
             $packages[] = 'consolidation/robo';
