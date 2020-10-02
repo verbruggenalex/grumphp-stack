@@ -36,8 +36,9 @@ grumphp:
         jsonlint:
             ignore_patterns: ['.tmp', 'vendor']
         # kahlan: ~
-        # make: ~
-        # npm_script: ~
+        make: ~
+        npm_script:
+            script: test
         paratest: ~
         # pest: ~
         # phan: ~        
