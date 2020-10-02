@@ -25,6 +25,7 @@
         "nikic/php-parser": "^4.10",
         "phan/phan": "^3.2",
         "phing/phing": "^2.16",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
         "phpmd/phpmd": "^2.9",
         "phpro/grumphp": "^1.0",
         "phpspec/phpspec": "^6.2",
@@ -46,15 +47,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "post-install-cmd": [
-            "@install-brunch",
-            "@install-eslint",
-            "@install-gulp",
-            "@install-grunt"
-        ],
-        "install-brunch": "npm install brunch --save-dev",
-        "install-eslint": "npm install eslint --save-dev",
-        "install-grunt": "npm install grunt --save-dev",
-        "install-gulp": "npm install gulp --save-dev"
+        "post-install-cmd": "npm install"
     }
 }
