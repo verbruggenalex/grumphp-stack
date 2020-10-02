@@ -39,10 +39,10 @@ grumphp:
         paratest: ~
         # pest: ~
         # phan: ~        
-        # phing: ~
+        phing: ~
         # php7cc: ~
-        phpcpd:
-            exclude: ['vendor']
+        # phpcpd:
+        #     exclude: ['vendor']
         phpcs: ~
         # phpcsfixer: ~
         phplint: ~
