@@ -38,7 +38,7 @@ jobs:
 
     - name: Composer install
       run: |
-        composer install --no-progress --no-suggest --ansi
+        composer install --no-progress --no-suggest --no-interaction --ansi
 
     - name: Static checks
       run: |
