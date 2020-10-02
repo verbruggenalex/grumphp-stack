@@ -38,11 +38,11 @@ jobs:
 
     - name: Composer install
       run: |
+        echo "./node_modules/.bin" >> $GITHUB_PATH
         composer install --no-progress --no-suggest --no-interaction --ansi
 
     - name: Static checks
       run: |
-        export PATH=$PATH:./node_modules/.bin
         ./vendor/bin/grumphp run --ansi
 
     - name: Regenerate composer.json
