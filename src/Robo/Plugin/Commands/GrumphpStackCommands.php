@@ -83,7 +83,7 @@ class GrumphpStackCommands extends \Robo\Tasks
 
             $packages = array_keys($suggests);
             // Change version and package names:
-            $packages[] = 'friendsoftwig/twigcs:^4.0';
+            $packages[] = 'friendsoftwig/twigcs:>=4';
             $packages[] = 'squizlabs/php_codesniffer:3.x-dev';
             $packages[] = 'symplify/easy-coding-standard';
             $packages[] = 'consolidation/robo';
@@ -95,7 +95,7 @@ class GrumphpStackCommands extends \Robo\Tasks
         $this->tasks[] = $this->taskExecStack()
             ->stopOnFail()
             ->executable($composerBin)
-            ->exec('require ' . implode(' ', $packages) . ' --prefer-lowest --no-suggest --no-progress --ansi');
+            ->exec('require "' . implode('" "', $packages) . '" --prefer-lowest --no-suggest --no-progress --ansi');
 
         // Normalize the composer.json.
         $this->tasks[] = $this->taskExecStack()
