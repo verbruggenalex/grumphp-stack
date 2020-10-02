@@ -23,14 +23,13 @@
         "maglnet/composer-require-checker": "^2.1",
         "nette/tester": "^2.3",
         "nikic/php-parser": "^4.10",
-        "pestphp/pest": "^0.3.7",
         "phan/phan": "^3.2",
         "phing/phing": "^2.16",
         "phpmd/phpmd": "^2.9",
         "phpro/grumphp": "^1.0",
         "phpspec/phpspec": "^6.2",
-        "phpstan/phpstan": "^0.12.47",
-        "phpunit/phpunit": "^9.3",
+        "phpstan/phpstan": "^0.12.48",
+        "phpunit/phpunit": "^9.4",
         "roave/security-advisories": "dev-master",
         "sebastian/phpcpd": "^6.0",
         "sensiolabs/security-checker": "^6.0",
@@ -39,6 +38,7 @@
         "symplify/easy-coding-standard": "^8.3",
         "vimeo/psalm": "^3.16"
     },
+    "require-dev": {},
     "autoload-dev": {
         "psr-4": {
             "VerbruggenAlex\\GrumphpStack\\": "src/"
