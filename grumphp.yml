@@ -4,7 +4,8 @@ grumphp:
         failed: ~
         succeeded: ~
     tasks:
-        ant: ~
+        ##'sudo apt-get install ant' takes about 184MB, not worth enabling.
+        # ant: ~
         atoum: ~
         # behat: ~
         brunch: ~

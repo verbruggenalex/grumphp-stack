@@ -16,14 +16,14 @@ class GrumphpStackCommands extends \Robo\Tasks
     /** @var array $tasks */
     protected $tasks = [];
 
-  /**
-   * Generate the composer.json.
-   *
-   * @return \Robo\Collection\CollectionBuilder|null
-   *   Collection builder.
-   *
-   * @command gs:generate
-   */
+    /**
+     * Generate the composer.json.
+     *
+     * @return \Robo\Collection\CollectionBuilder|null
+     *   Collection builder.
+     *
+     * @command gs:generate
+     */
     public function generateComposerJson()
     {
         // Download the phpro/grumphp composer.json file.
@@ -42,7 +42,6 @@ class GrumphpStackCommands extends \Robo\Tasks
 
         if (file_exists($grumphpComposerJson)) {
             $suggests = json_decode(file_get_contents($grumphpComposerJson), true)['suggest'];
-
 
             // Remove require section from composer.json to re-require the suggests.
             $libraryComposerJson = json_decode(file_get_contents('composer.json'), true);
