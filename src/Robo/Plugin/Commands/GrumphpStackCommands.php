@@ -59,34 +59,30 @@ class GrumphpStackCommands extends \Robo\Tasks
                     ->exec('remove ' . implode(' ', array_keys($toRemove)) . ' --ansi');
             }
 
-            // Change version of quizlabs/php_codesniffer to 3.x-dev.
-            unset($suggests['squizlabs/php_codesniffer']);
-            // The infection/infection package conflicts with phpunit/phpunit.
-            unset($suggests['infection/infection']);
-            // The sstalle/php7cc package conflicts with nikic/php-parser.
-            unset($suggests['sstalle/php7cc']);
-            // The malukenho/kawaii-gherkin conflicts with vimeo/psalm because
-            // of an old sebastian/diff ~1.2 requirement. I would like to
-            // resolve that one.
-            unset($suggests['malukenho/kawaii-gherkin']);
-            // The povils/phpmnd package conflicts with phpunit/phpunit because
-            // of an older phpunit/php-timer ^2.0||^3.0 requirement. I would
-            // like to resolve that one.
-            unset($suggests['povils/phpmnd']);
-            // The pestphp/pest package conflicts with phpunit/phpunit req.
-            unset($suggests['pestphp/pest']);
-            // Unset friendsoftwig/twigcs to make the requirement higher.
-            unset($suggests['friendsoftwig/twigcs']);
-            // Unset codeception/codeception because of phpunit. I'm just not
-            // familiar enough with these tests yet.
-            unset($suggests['codeception/codeception']);
+            // Array with hardcoded removals:
+            $toRemoveHardcoded = [
+                'friendsoftwig/twigcs', // Unset to increase version.
+                'squizlabs/php_codesniffer', // Change version to 3.x-dev.
+                'infection/infection', // Conflicts with phpunit/phpunit.
+                'sstalle/php7cc', // Conflicts with nikic/php-parser.
+                'malukenho/kawaii-gherkin', // Conflicts with vimeo/psalm.
+                'povils/phpmnd', // conflicts with phpunit/phpunit.
+                'pestphp/pest', // Conflicts with phpunit/phpunit.
+                'codeception/codeception', // Conflicts with phpunit/phpunit.
+            ];
 
-            $packages = array_keys($suggests);
+            $intersectRemoval = array_intersect(array_keys($oldPackages), $toRemoveHardcoded);
+            if (count($intersectRemoval) !== 0) {
+                $this->tasks[] = $this->taskExecStack()
+                ->stopOnFail()
+                ->executable($composerBin)
+                ->exec('remove ' . implode(' ', $intersectRemoval) . ' --ansi');
+            }
+
+            $packages = array_diff(array_keys($suggests), $toRemoveHardcoded);
             // Change version and package names:
             $packages[] = 'friendsoftwig/twigcs:>=4';
             $packages[] = 'squizlabs/php_codesniffer:3.x-dev';
-            $packages[] = 'symplify/easy-coding-standard';
-            $packages[] = 'consolidation/robo';
             // Add the phpro/grumphp package.
             $packages[] = 'phpro/grumphp';
         }

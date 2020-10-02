@@ -12,7 +12,6 @@
         "atoum/atoum": "^3.4",
         "behat/behat": "^3.7",
         "brianium/paratest": "^5.0",
-        "codeception/codeception": "^4.1",
         "consolidation/robo": "^2.2",
         "designsecurity/progpilot": "^0.8.0",
         "doctrine/orm": "^2.7",
