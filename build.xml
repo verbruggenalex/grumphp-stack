@@ -2,6 +2,6 @@
 
 <project name="FooBar" default="run">
     <target name="run">
-        <echo msg="Running phing..." />
+        <echo message="Running phing or ant..." />
     </target>
 </project>
