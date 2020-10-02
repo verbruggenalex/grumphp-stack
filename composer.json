@@ -42,7 +42,7 @@
     "autoload-dev": {
         "psr-4": {
             "VerbruggenAlex\\GrumphpStack\\": "src/",
-            "VerbruggenAlex\\GrumphpStack\\Tests": "tests/"
+            "VerbruggenAlex\\GrumphpStack\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
