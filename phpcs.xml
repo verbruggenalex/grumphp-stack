@@ -3,8 +3,9 @@
 
   <description>The coding standard for this project.</description>
 
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/tmp/*</exclude-pattern>
   <exclude-pattern>*/vendor/*</exclude-pattern>
-  <exclude-pattern>*/test/*</exclude-pattern>
 
   <rule ref="PSR2"/>
 
